@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KeeSkatez | Мерч для райдеров</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #0a0a0a; color: #fff; line-height: 1.5; scroll-behavior: smooth; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; border-radius: 8px; }
+
+    header { position: fixed; top: 0; width: 100%; background: rgba(10,10,10,0.95); backdrop-filter: blur(10px); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; z-index: 1000; }
+    header h1 { color: #e50914; letter-spacing: 1px; font-size: 1.5rem; }
+    nav a { margin-left: 20px; font-weight: 500; transition: color 0.3s; }
+    nav a:hover { color: #e50914; }
+
+    .hero { text-align: center; padding: 150px 20px 100px; background: linear-gradient(to bottom, #111, #0a0a0a); }
+    .hero h2 { font-size: 3rem; color: #e50914; margin-bottom: 20px; opacity: 0; transform: translateY(30px); transition: all 1s; }
+    .hero p { font-size: 1.2rem; color: #ccc; opacity: 0; transform: translateY(30px); transition: all 1s 0.3s; }
+
+    .section { padding: 100px 5% 80px; text-align: center; }
+    .section h3 { font-size: 2rem; margin-bottom: 50px; color: #e50914; opacity: 0; transform: translateY(30px); transition: all 0.8s; }
+
+    .catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+    .item { background: #111; padding: 20px; border-radius: 10px; transition: transform 0.3s, box-shadow 0.3s; opacity: 0; transform: translateY(30px); transition: all 0.8s; }
+    .item:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(229,9,20,0.4); }
+    .item h4 { margin: 15px 0 5px; }
+    .item p { color: #aaa; font-size: 0.9rem; margin-bottom: 10px; }
+    .btn { display: inline-block; background: #e50914; color: #fff; padding: 10px 20px; border-radius: 5px; font-weight: 600; transition: background 0.3s; }
+    .btn:hover { background: #b00710; }
+
+    .about, .contact { max-width: 800px; margin: 0 auto; color: #ddd; opacity: 0; transform: translateY(30px); transition: all 0.8s; }
+    .about p, .contact p { margin-bottom: 20px; }
+
+    footer { text-align: center; padding: 30px; border-top: 1px solid #222; color: #777; font-size: 0.9rem; }
+
+    .visible { opacity: 1 !important; transform: translateY(0) !important; }
+
+    @media (max-width: 600px) {
+      .hero h2 { font-size: 2rem; }
+      nav a { margin-left: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KeeSkatez</h1>
+    <nav>
+      <a href="#catalog">Каталог</a>
+      <a href="#about">О нас</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Мерч для тех, кто живёт на доске</h2>
+    <p>Худи, футболки и скейт-доски с характером. Создано для движения.</p>
+  </section>
+
+  <section id="catalog" class="section">
+    <h3>Каталог</h3>
+    <div class="catalog">
+      <div class="item">
+        <img src="https://via.placeholder.com/400x400/111111/e50914?text=Hoodie" alt="Худи">
+        <h4>Худи KeeSkatez</h4>
+        <p>Тёплый и стильный худи с логотипом. Идеален для катки и города.</p>
+        <a href="#" class="btn">Добавить в корзину</a>
+      </div>
+      <div class="item">
+        <img src="https://via.placeholder.com/400x400/111111/e50914?text=T-Shirt" alt="Футболка">
+        <h4>Футболка KeeSkatez</h4>
+        <p>Лёгкая и удобная. Минимализм, комфорт и стиль в каждом движении.</p>
+        <a href="#" class="btn">Добавить в корзину</a>
+      </div>
+      <div class="item">
+        <img src="https://via.placeholder.com/400x400/111111/e50914?text=Skateboard" alt="Скейт-доска">
+        <h4>Скейтборд KeeSkatez</h4>
+        <p>Прочная доска с агрессивным дизайном. Для настоящих райдеров.</p>
+        <a href="#" class="btn">Добавить в корзину</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h3>О нас</h3>
+    <div class="about">
+      <p>KeeSkatez — это бренд, созданный скейтерами для скейтеров. Мы вдохновляемся уличной культурой, скоростью и свободой. Наш мерч — это не просто одежда, а отражение духа движения.</p>
+      <p>Мы делаем то, что любим. Мы катаем, творим и делаем мир чуть ярче с каждой новой доской и худи.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h3>Контакты</h3>
+    <div class="contact">
+      <p>📍 Москва, Россия</p>
+      <p>📧 info@keeskatez.com</p>
+      <p>📱 +7 (900) 123-45-67</p>
+      <p>Подписывайся на нас в соцсетях и будь в движении:</p>
+      <p>
+        <a href="#" style="color:#e50914; margin:0 10px;">Instagram</a> |
+        <a href="#" style="color:#e50914; margin:0 10px;">VK</a> |
+        <a href="#" style="color:#e50914; margin:0 10px;">YouTube</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 KeeSkatez. Все права защищены.
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.hero h2, .hero p, .section h3, .item, .about, .contact').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
